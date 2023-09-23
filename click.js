@@ -1,14 +1,21 @@
 const btn = document.getElementById("button");
 const list = document.getElementById("list");
 
-btn.addEventListener("click",function(){
+btn.addEventListener("click",() => {
  list.classList.toggle("hidden")
+});
+btn.addEventListener("click", () => {
+    window.setTimeout(() => {
+        alert("1.5秒だよ");
+    }, 1500);
 });
 
 
-var elem1 = document.getElementById("stealth");
-var elem2 = document.getElementById("link_view");
-var elem3 = document.getElementById("link_hidden");
+
+
+let elem1 = document.getElementById("stealth");
+let elem2 = document.getElementById("link_view");
+let elem3 = document.getElementById("link_hidden");
 function toggle_view(){
     elem1.style.display = "";
     elem2.style.display = "none";
@@ -19,4 +26,10 @@ function toggle_hidden(){
     elem2.style.display = "";
     elem3.style.display = "none";
 }
+
+function qq(){
+    let obj = document.getElementsByClassName("pochi")[0];
+    obj.style.opacity = 0.1;
+}
+
 
